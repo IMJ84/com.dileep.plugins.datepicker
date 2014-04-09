@@ -21,8 +21,8 @@ function DatePicker() {
  */
 DatePicker.prototype.show = function(options, cb) {
     if (options.date) {
-        options.date = (options.date.getMonth() + 1) + "/" + (options.date.getDate()) + "/" + (options.date.getFullYear()) + "/"
-            + (options.date.getHours()) + "/" + (options.date.getMinutes());
+        options.date = (options.date.getUTCMonth() + 1) + "/" + (options.date.getUTCDate()) + "/" + (options.date.getFullYear()) + "/"
+            + (options.date.getUTCHours()) + "/" + (options.date.getUTCMinutes());
     }
     var defaults = {
         mode : 'datetime',
