@@ -30,21 +30,4 @@
         <source-file src="src/android/OnDateTimeSetListener.java" target-dir="src/com/dileep/plugins/datepicker" />
 
     </platform>
-
-    <platform name="ios">
-
-        <config-file target="config.xml" parent="/*">
-            <feature name="DatePickerPlugin">
-                <param name="ios-package" value="DatePicker"/>
-            </feature>
-        </config-file>
-
-        <js-module src="www/DatePicker.js" name="DatePicker">
-            <clobbers target="datePicker" />
-        </js-module>
-
-        <header-file src="src/ios/DatePicker.h" />
-        <source-file src="src/ios/DatePicker.m" />
-
-    </platform>
 </plugin>
