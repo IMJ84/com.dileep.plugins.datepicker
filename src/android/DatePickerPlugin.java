@@ -116,7 +116,9 @@ public class DatePickerPlugin extends CordovaPlugin {
 							datePickerPlugin, callbackContext);
 					final DateTimePickerDialog dateTimePickerDialog = new DateTimePickerDialog(
 							currentCtx, dateTimeSetListener);
+					
 					dateTimePickerDialog.show();
+					dateTimePickerDialog.setDefaultDate(mYear, mMonth, mDay, mHour, mMinutes);
 				}
 			};
 

@@ -48,7 +48,7 @@ public class DateTimePickerDialog extends Dialog implements OnClickListener {
 		cancel.setLayoutParams(layoutParams);
 		buttons.addView(cancel);
 		Button set = new Button(context);
-		set.setText("set");
+		set.setText("Set");
 		set.setOnClickListener(this);
 		set.setLayoutParams(layoutParams);
 		buttons.addView(set);
@@ -57,7 +57,7 @@ public class DateTimePickerDialog extends Dialog implements OnClickListener {
 
 		setCancelable(true);
 		setCanceledOnTouchOutside(true);
-		setTitle("Set date and time");
+		setTitle("Set Date and Time");
 		setContentView(ll);
 
 	}
@@ -74,6 +74,12 @@ public class DateTimePickerDialog extends Dialog implements OnClickListener {
 		);
 
 		dismiss();
+	}
+	
+	public void setDefaultDate(int year, int month, int day, int hour, int minute) {
+		datePicker.updateDate(year, month, day);
+		timePicker.setCurrentHour(hour);
+		timePicker.setCurrentMinute(minute);
 	}
 
 	static class CancelOnClickListener implements
